@@ -1,2 +1,2 @@
-TOKEN = 'NzcyNjYwODE3NjA2MDgyNTcx.X596dg.ckG9IaqreLsNfklNThS4lLc-5Jw'
+TOKEN = ''
 GUILD = 'User\'s server'
