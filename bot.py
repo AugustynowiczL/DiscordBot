@@ -41,13 +41,13 @@ async def dm(ctx, user_id, number, message):
         time.sleep(1)
 
 @bot.command(name = 'skyrim')
-async def cousin(ctx):
+async def play_skyrim_sound(ctx):
     await ctx.send(file=discord.File('cloud.jpg'))
 
 #Adapted from Thomas Kelly's code on how to play sound in voice channel from:
 #https://stackoverflow.com/a/53790124
 @bot.command(name = 'error')
-async def wet(ctx):
+async def play_error_sound(ctx):
     # Gets voice channel of message author
     voice_channel = ctx.author.voice.channel
     channel = None
