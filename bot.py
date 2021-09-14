@@ -64,41 +64,6 @@ async def wet(ctx):
     # Delete command after the audio is done playing.
     await ctx.message.delete()
 
-@bot.command(name = 'murloc')
-async def wet(ctx):
-    # Gets voice channel of message author
-    voice_channel = ctx.author.voice.channel
-    channel = None
-    if voice_channel != None:
-        channel = voice_channel.name
-        vc = await voice_channel.connect()
-        vc.play(discord.FFmpegPCMAudio(executable='C:/Users/Lukas/Desktop/Discord Bot/ffmpeg-20200831-4a11a6f-win64-static/ffmpeg-20200831-4a11a6f-win64-static/bin/ffmpeg.exe', source="murloc.mp3"))
-        # Sleep while audio is playing.
-        while vc.is_playing():
-            time.sleep(.1)
-        await vc.disconnect()
-    else:
-        await ctx.send(str(ctx.author.name) + "is not in a channel.")
-    # Delete command after the audio is done playing.
-    await ctx.message.delete()
-
-@bot.command(name = 'peon')
-async def wet(ctx):
-    # Gets voice channel of message author
-    voice_channel = ctx.author.voice.channel
-    channel = None
-    if voice_channel != None:
-        channel = voice_channel.name
-        vc = await voice_channel.connect()
-        vc.play(discord.FFmpegPCMAudio(executable='C:/Users/Lukas/Desktop/Discord Bot/ffmpeg-20200831-4a11a6f-win64-static/ffmpeg-20200831-4a11a6f-win64-static/bin/ffmpeg.exe', source="peon.mp3"))
-        # Sleep while audio is playing.
-        while vc.is_playing():
-            time.sleep(.1)
-        await vc.disconnect()
-    else:
-        await ctx.send(str(ctx.author.name) + "is not in a channel.")
-    # Delete command after the audio is done playing.
-    await ctx.message.delete()
 
 bot.run(constants.TOKEN)
 
